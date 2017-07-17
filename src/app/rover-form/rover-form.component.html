@@ -1,6 +1,8 @@
 
 <h1 class="text-center">Curiousity 🕵 Images 📸</h1>
+<a routerLink="user/photos">View Your Saved Photos</a>
 
+<!--form-->
 <form class="well">
   <div class="form-group">
     <label for="camera">Date 📅</label>
@@ -16,11 +18,17 @@
       <option  value="MAHLI">Mars Hand Lens Imager</option>
     </select>
   </div>
+  <!--buttons-->
   <button class='btn btn-block btn-primary' (click)="getRoverImages(roverDate.value, roverCamera.value)">Get Photos</button>
+  <button (click)="saveRoverImages(roverDate.value, roverCamera.value)">Save All Images</button>
 </form>
+
+
 <div *ngIf='photos'>
   <app-photos-list [childPhotos]='photos'></app-photos-list>
 </div>
+
+
 <div class='text-center' *ngIf="noPhotos">
     <h3>There were no photos taken on {{roverDate.value}} by the {{roverCamera.value}} camera.</h3>
 </div>

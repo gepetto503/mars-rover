@@ -1,11 +1,17 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { RoverFormComponent } from './app/rover-form/rover-form.component';
+import { RoverFormComponent } from '../app/rover-form/rover-form.component';
+import { UserPhotosListComponent } from './user-photos-list/user-photos-list.component';
+
 
 const appRoutes: Routes = [
   {
     path: '',
     component: RoverFormComponent
+  },
+  {
+    path: 'user/photos',
+    component: UserPhotosListComponent
   }
 ];
 
