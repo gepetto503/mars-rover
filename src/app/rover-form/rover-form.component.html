@@ -1,5 +1,5 @@
 
-<h1 class="text-center">Curiousity 🕵 Images 📸</h1>
+<h1 class="text-center">Photos From the Mars Rover named Curiosity</h1>
 <a routerLink="user/photos">View Your Saved Photos</a>
 
 <!--form-->
@@ -20,7 +20,7 @@
   </div>
   <!--buttons-->
   <button class='btn btn-block btn-primary' (click)="getRoverImages(roverDate.value, roverCamera.value)">Get Photos</button>
-  <button (click)="saveRoverImages(roverDate.value, roverCamera.value)">Save All Images</button>
+  <button id="savebutton"(click)="saveRoverImages(roverDate.value, roverCamera.value)">Save All Images</button>
 </form>
 
 
